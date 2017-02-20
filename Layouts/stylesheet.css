@@ -3,6 +3,19 @@
 /  stylesheet for Scheduler
 */
 
+/* Login.html CSS */
+
 #login {      
     border: 2px black solid;
+}
+
+/* signup.html CSS */
+
+#forms{
+    width: 500px;
+    height:500px;
+    border: 2px #251605 solid;
+    background-color: #F1AB86;    
+    position: absolute;
+    left: 400px;
 }
