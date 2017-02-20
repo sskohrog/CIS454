@@ -1,7 +1,7 @@
-// Config.php 
-// 
-//	Configures the database info
-//
+<!-- Config.php 
+
+Configures the database info
+ -->
 
 <?php
 	define('DB_SERVER','localhost');
