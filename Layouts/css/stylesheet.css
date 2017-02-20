@@ -5,8 +5,15 @@
 
 /* Login.html CSS */
 
-#login {      
-    border: 2px black solid;
+#login {
+                
+    border: 2px #251605 solid;
+    width: 400px;
+    height: 150px;
+    position: relative;
+    left: 425px;
+    background-color: #F1AB86;
+    text-align: center;
 }
 
 /* signup.html CSS */
