@@ -1,21 +1,36 @@
 <html>
     <header>
+        
         <title> Create Your Account </title>
+        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+        
         <style type="text/css">
             #forms{
                 width: 500px;
                 height:500px;
-                border: 2px #251605 solid;
-                background-color: #F1AB86;    
+                border: 2px #A37D73 solid;
+                background-color: #DB7F67;    
                 position: absolute;
                 left: 400px;
                 }
+            #body{
+                background-color: #DBADA2;
+            }
+            #title{
+                font-family: fantasy;
+            }
+            #otto{
+                position:absolute;
+                left: 0px;
+                top: 300px;
+            }
         </style>
     </header>
     
-        <body>
+        <body id = "body">
             <h1 align ="center"><b> Class Scheduler</b></h1>
-            <h2 align ="center"> Create Your Account</h2>
+            <h2 align ="center" id = "title"> Create Your Account</h2>
             <div id= "forms">
                 <form align ="center">
                     <p>First Name 
@@ -65,6 +80,7 @@
                     <p align ="center"><input type="submit" value="Login"></p>
                 </form>
             </div>
+            <p id= "otto"><img align src="otto.png" width = "300"></p>
         </body>
     
 </html>

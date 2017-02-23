@@ -4,37 +4,56 @@
     
         <title> Class Scheduler </title>
     
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+        
         <style type="text/css">
             
             #login {
                 
-                border: 2px #251605 solid;
+                margin: auto;
+                border: 2px #A37D73 solid;
                 width: 400px;
                 height: 150px;
-                position: relative;
-                left: 425px;
-                background-color:#F1AB86;
+              
+                
+                background-color:#DB7F67;
+            }
+            #title {
+                font-family: cursive;
+                font-size: 70px;
+                color:#3F2D29;
             }
             
-           
+            #otto{
+                position:absolute;
+                left: 0px;
+                top: 300px;
+            }
+            #body{
+                background-color: #DBADA2;
+            }
             
         </style>
             
     </head>
 
-    <body>
+    <body id="body">
         
-        <br><h1 align = "center">Create Your Schedule </h1>
+        <br><h1 align = "center" id = "title">Create Your Schedule </h1>
         
           <p align ="center"><img src="schedule01.png" width ="400px"></p>
+         
+            <p id= "otto"><img align src="otto.png" width = "300"></p>
         
         <div id = "login">
             
             <form align = "center"> 
+            
         
                 <p> Email : <input type = "text"></p>
                 <p> Password : <input type = "text>"> </p>
             
+                
             </form>
         
             <form action= "link to home">
@@ -49,6 +68,7 @@
             
             </form>
         
+            
         </div>
     
     </body>
