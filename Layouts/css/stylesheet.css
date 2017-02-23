@@ -1,0 +1,28 @@
+/* stylesheet.css
+/
+/  stylesheet for Scheduler
+*/
+
+/* Login.html CSS */
+
+#login {
+                
+    border: 2px #251605 solid;
+    width: 400px;
+    height: 150px;
+    position: relative;
+    left: 425px;
+    background-color: #F1AB86;
+    text-align: center;
+}
+
+/* signup.html CSS */
+
+#forms{
+    width: 500px;
+    height:500px;
+    border: 2px #251605 solid;
+    background-color: #F1AB86;    
+    position: absolute;
+    left: 400px;
+}

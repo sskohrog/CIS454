@@ -1,8 +1,39 @@
+<!-- 
+// Login.html
+// log in page of scheduler 
+-->
+
+<?php
+    include("config.php");
+    session_start();
+
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+      $un = mysqli_real_escape_string($db,$_POST['username']);
+      $pw = mysqli_real_escape_string($db,$_POST['password']); 
+      
+      $sql = "SELECT id FROM admin WHERE username = '$un' and passcode = '$pw'";
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      if($count == 1) {
+         session_register("un");
+         $_SESSION['login_user'] = $un;
+         
+         header("location: welcome.php");
+      } else {
+         $error = "The Email or Password you used is invalid. Please try again";
+      }
+   }
+?>
+
 <html>
-    
     <head>
-    
         <title> Class Scheduler </title>
+<<<<<<< HEAD
     
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
         
@@ -55,25 +86,47 @@
             
                 
             </form>
+=======
+
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+    </head>
+
+    <body>
+        <h1 align="center">Create Your Schedule </h1>
         
-            <form action= "link to home">
-          
-                <p align = "center"> <input type="submit" value= Login></p>
+        <p align="center"><img src="schedule01.png" width="400"></p>
+>>>>>>> 8273892f5b69e671b444c5add7b3471b6f044f78
         
+        <br>
+        
+        <div id="login">
+
+            <form id="emailpw" action="" method="post">
+                  <label>Email : </label>
+                  <input type="text" name="username" class="box"/>
+                  
+                  <br/><br/>
+                  
+                  <label>Password : </label>
+                  <input type="password" name="password" class="box"/>
+                  
+                  <br/><br/>
+                  
+                  <input type="submit" value="Login"/>
+                  
+                  <br/>
             </form>
         
-            <form action= "signup.html">
-          
-                <p align = "center"> <input type="submit" value="Create Account"></p>
-            
+            <form action="signup.html">
+                <p align="center"> 
+                    <input type="submit" value="Create Account">
+                </p>
             </form>
+<<<<<<< HEAD
         
             
+=======
+>>>>>>> 8273892f5b69e671b444c5add7b3471b6f044f78
         </div>
-    
     </body>
-
-
-
-
 </html>
