@@ -3,19 +3,6 @@
 /  stylesheet for Scheduler
 */
 
-/* Login.html CSS */
-
-#login {
-                
-    border: 2px #251605 solid;
-    width: 400px;
-    height: 150px;
-    position: relative;
-    left: 425px;
-    background-color: #F1AB86;
-    text-align: center;
-}
-
 /* signup.html CSS */
 
 #forms{
@@ -25,4 +12,30 @@
     background-color: #F1AB86;    
     position: absolute;
     left: 400px;
+}
+
+/* Login.html CSS */
+
+#login {    
+    margin: auto;
+    border: 2px #A37D73 solid;
+    width: 400px;
+    height: 150px;
+    background-color:#DB7F67;
+}
+
+#title {
+    font-family: cursive;
+    font-size: 70px;
+    color:#3F2D29;
+}
+
+#otto{
+    position:absolute;
+    left: 0px;
+    top: 300px;
+}
+
+#body {
+    background-color: #DBADA2;
 }
