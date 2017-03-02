@@ -2,34 +2,6 @@
 // Login.html
 // log in page of scheduler 
 -->
-
-<?php
-    include("config.php");
-    session_start();
-
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-      $un = mysqli_real_escape_string($db,$_POST['username']);
-      $pw = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT id FROM admin WHERE username = '$un' and passcode = '$pw'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      if($count == 1) {
-         session_register("un");
-         $_SESSION['login_user'] = $un;
-         
-         header("location: welcome.php");
-      } else {
-         $error = "The Email or Password you used is invalid. Please try again";
-      }
-   }
-?>
-
 <html>
     <head>
         <title> Class Scheduler </title>
@@ -48,18 +20,20 @@
         
         <div id="login">
 
-            <form id="emailpw" align="center" action="" method="post">
+            <form id="emailpw" align="center" action="login.php" method="POST">
                   <label>Email : </label>
                   <input type="text" name="username" class="box"/>
                   
                   <br/><br/>
                   
                   <label>Password : </label>
-                  <input type="password" name="password" class="box"/>
+                  <p>
+                    <input type="password" name="password" class="box"/>
                   
-                  <br/><br/>
-                  
-                  <input type="submit" value="Login"/>
+                    <br/>
+                    <input name="action" type="hidden" value="login"/>
+                  </p>
+                  <p><input type="submit" value="Login"/></p>
                   
                   <br/>
             </form>

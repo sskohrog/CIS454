@@ -2,41 +2,17 @@
     <header>
         
         <title> Create Your Account </title>
-<<<<<<< HEAD
         
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-        
-        <style type="text/css">
-            #forms{
-                width: 500px;
-                height:500px;
-                border: 2px #A37D73 solid;
-                background-color: #DB7F67;    
-                position: absolute;
-                left: 400px;
-                }
-            #body{
-                background-color: #DBADA2;
-            }
-            #title{
-                font-family: fantasy;
-            }
-            #otto{
-                position:absolute;
-                left: 0px;
-                top: 300px;
-            }
-        </style>
-=======
-
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
->>>>>>> 8273892f5b69e671b444c5add7b3471b6f044f78
+
     </header>
     
         <body id = "body">
             <h1 align ="center"><b> Class Scheduler</b></h1>
             <h2 align ="center" id = "title"> Create Your Account</h2>
-            <div id= "forms">
+            
+            <div id= "forms" action="signup.php" method="POST">
                 <form align ="center">
                     <p>First Name 
                         <br><input type = "text"></p>
@@ -79,8 +55,10 @@
                             <option>Graduate School</option>
                         </select>
                     </p>
+                    <p><input name="action" type="hidden" value="signup"/></p>
                     <p> <input type="submit" value="Create Account"></p>    
                 </form>
+
                 <form action = "Login.html">
                     <p align ="center"><input type="submit" value="Login"></p>
                 </form>
