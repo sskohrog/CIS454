@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-  <?php include 'navbar.php'; ?>
+  <?php include 'navbar-login.php'; ?>
 
   <!-- HEADER -->
   <!--  <header> -->
@@ -98,7 +99,7 @@
             <option>Part-Time Study at Syracuse: University College</option>
             <option>College of Law</option>
             <option>Graduate School</option>
-          </select>	
+          </select> 
         </div>
       </div>
 
@@ -137,36 +138,23 @@
 
   </div>
 
-</div><!-- tab-content -->
+</div>
+</div>
 
-     <!--
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h1 class="text-center">Welcome to Class Scheduler</h1>
-            <p class="text-center">Class Scheduler is a scheduling system helper that provides students with a way to create semester schedules based on the classes they need or want to take. We facilitate the process of choosing class sections that don’t have conflicts with other classes and/or the student's life schedule. </p>
-            <p>&nbsp;</p>
-            <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
-          </div>
-        </div>
-      </div>
-    -->
-  </div>
-
-  <footer class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <p>Copyright © MyWebsite. All rights reserved.</p>
-        </div>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © MyWebsite. All rights reserved.</p>
       </div>
     </div>
-    <!-- / FOOTER --> 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="../js/jquery-1.11.3.min.js"></script> 
-    <!-- Include all compiled plugins (below), or include individual files as needed --> 
-    <script src="../js/bootstrap.js"></script>
-  </footer>
+  </div>
+  <!-- / FOOTER --> 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  <script src="../js/jquery-1.11.3.min.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed --> 
+  <script src="../js/bootstrap.js"></script>
+</footer>
 
 </body>
 </html>

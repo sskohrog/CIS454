@@ -42,4 +42,7 @@
       else {
         $message = "The Email or Password you used is invalid. Please try again";
       }        
+    }
   }
+?>
+  

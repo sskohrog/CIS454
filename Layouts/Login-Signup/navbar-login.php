@@ -16,10 +16,10 @@
               <button type="Submit" class="btn btn-default">GO</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">About Us</a> </li>
+              <li><a href="../UserView.php">About Us</a> </li>
               <li><a href="#">My Schedule</a> </li>
               <li><a href="#">Generate</a> </li>
-              <li><a href="add-to-cart-interaction/AddingClassToCart.html">Browse</a> </li>
+              <li><a href="../add-to-cart-interaction/AddingClassToCart.html">Browse</a> </li>
               <li><a href="#">My Cart</a> </li>
             </ul>
           </div>

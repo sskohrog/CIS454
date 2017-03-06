@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-  <?php include'navbar.php'; ?>
+  <?php include 'navbar.php'; ?>
 
   <!-- HEADER -->
   <header>
