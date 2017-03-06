@@ -5,37 +5,6 @@
 
 /* signup.html CSS */
 
-#forms{
-    width: 500
-    height:500px;
-    border: 2px #251605 solid;
-    background-color: #F1AB86;    
-    position: absolute;
-    left: 400px;
-}
-
-/* Login.html CSS */
-
-#login {    
-    margin: auto;
-    border: 2px #A37D73 solid;
-    width: 400px;
-    height: 150px;
-    background-color:#DB7F67;
-}
-
-#title {
-    font-family: cursive;
-    font-size: 70px;
-    color:#3F2D29;
-}
-
-#otto{
-    position:absolute;
-    left: 0px;
-    top: 300px;
-}
-
-#body {
-    background-color: #DBADA2;
+.forgot > a {
+    color: #333333;
 }
