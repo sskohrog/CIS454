@@ -26,14 +26,14 @@
 ?>-->
 
 <?php
-  include("config.php");
+  include "config-user.php";
   session_start();
 
   if(isset($_POST['action'])) {
     if($_POST['action'] == "login") {
-      $email = mysqli_real_escape_string($connection,$_POST['email']);
-      $password = mysqli_real_escape_string($connection,$_POST['password']);
-      $strSQL = mysqli_query($connection,"select name from users where email='".$email."' and password='".md5($password)."'");
+      $email = mysqli_real_escape_string($db,$_POST['email']);
+      $password = mysqli_real_escape_string($db,$_POST['password']);
+      $strSQL = mysqli_query($db,"select name from users where email='".$email."' and password='".md5($password)."'");
       $Results = mysqli_fetch_array($strSQL);
       
       if(count($Results)>=1) {
