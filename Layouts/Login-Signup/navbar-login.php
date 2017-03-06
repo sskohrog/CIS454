@@ -19,7 +19,7 @@
               <li><a href="../UserView.php">About Us</a> </li>
               <li><a href="#">My Schedule</a> </li>
               <li><a href="#">Generate</a> </li>
-              <li><a href="../add-to-cart-interaction/AddingClassToCart.html">Browse</a> </li>
+              <li><a href="../add-to-cart-interaction/AddingClassToCart.php">Browse</a> </li>
               <li><a href="#">My Cart</a> </li>
             </ul>
           </div>
