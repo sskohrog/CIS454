@@ -46,7 +46,7 @@ if( isset($_POST['signup']) ) {
 // if there's no error, continue to signup
   if( !$error ) {
 
-    $query = "INSERT INTO users(username,email,password) VALUES('$name','$email','$password')";
+    $query = "INSERT INTO members(username,email,password) VALUES('$name','$email','$password')";
     $res = mysql_query($query);
 
     if ($res) {
@@ -214,7 +214,7 @@ if( isset($_POST['login']) ) {
         </div>
       </div>
 
-      <input type="submit" value="Signup" class="button button-block" name="signup"/>Get Started</input>
+      <input type="submit" value="Signup" class="button button-block" name="signup"/></input>
 
     </form>
 
