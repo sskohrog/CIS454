@@ -59,6 +59,14 @@ if( isset($_POST['signup']) ) {
       $errTyp = "danger";
       $errMSG = "Account was not created, please try again later ..."; 
     } 
+
+    $password = hash('sha256', $pass); 
+
+    $log=mysqli_query($conn,"SELECT id, username, password FROM members WHERE email='$email'");
+    $row2=mysqli_fetch_array($log);
+
+    $_SESSION['members'] = $row2['id'];
+    header("Location: ../home.php");
   }
 }
 
@@ -97,7 +105,7 @@ if( isset($_POST['login']) ) {
 
       if( $count == 1 && $row['password']==$password ) {
         $_SESSION['members'] = $row['id'];
-        header("Location: home.php");
+        header("Location: ../home.php");
       } else {
         $errMSG = "Incorrect email & password combination, Try again...";
       }
