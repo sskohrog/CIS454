@@ -1,42 +1,42 @@
-<?php 
-    include "../config-user.php";
-    session_start();     
-    // if($_POST['action']=="login") {
-  if($_POST['login') {
-        $email = mysqli_real_escape_string($db,$_POST['email']);
-        $password = mysqli_real_escape_string($db,$_POST['password']);
-        $strSQL = mysqli_query($db,"select name from users where email='".$email."' and password='".md5($password)."'");
-        $Results = mysqli_fetch_array($strSQL);
-        if(count($Results)>=1) {
-            $message = $Results['name']." Login Sucessfully!!";
-        }
-        else {
-            $message = "Invalid email or password!!";
-        }        
-    }
-    // elseif($_POST['action']=="signup") {
-    elseif($_POST['signup') {
-        $name       = mysqli_real_escape_string($db,$_POST['name']);
-        $email      = mysqli_real_escape_string($db,$_POST['email']);
-        $password   = mysqli_real_escape_string($db,$_POST['password']);
-        $query = "SELECT email FROM users where email='".$email."'";
-        $result = mysqli_query($db,$query);
-        $numResults = mysqli_num_rows($result);
+<!--<?php 
+  //   include "../config-user.php";
+  //   session_start();     
+  //   // if($_POST['action']=="login") {
+  // if($_POST['login') {
+  //       $email = mysqli_real_escape_string($db,$_POST['email']);
+  //       $password = mysqli_real_escape_string($db,$_POST['password']);
+  //       $strSQL = mysqli_query($db,"select name from users where email='".$email."' and password='".md5($password)."'");
+  //       $Results = mysqli_fetch_array($strSQL);
+  //       if(count($Results)>=1) {
+  //           $message = $Results['name']." Login Sucessfully!!";
+  //       }
+  //       else {
+  //           $message = "Invalid email or password!!";
+  //       }        
+  //   }
+  //   // elseif($_POST['action']=="signup") {
+  //   elseif($_POST['signup') {
+  //       $name       = mysqli_real_escape_string($db,$_POST['name']);
+  //       $email      = mysqli_real_escape_string($db,$_POST['email']);
+  //       $password   = mysqli_real_escape_string($db,$_POST['password']);
+  //       $query = "SELECT email FROM users where email='".$email."'";
+  //       $result = mysqli_query($db,$query);
+  //       $numResults = mysqli_num_rows($result);
 
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $message =  "Invalid email address please type a valid email!!";
-        }
-        elseif($numResults>=1) {
-          $message = $email." Email already exist!!";
-        }
-        else {
-          mysql_query("insert into users(name,email,password) values('".$name."','".$email."','".md5($password)."')");
-          $message = "Signup Sucessfully!!";
-      }
-    }
+  //       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  //           $message =  "Invalid email address please type a valid email!!";
+  //       }
+  //       elseif($numResults>=1) {
+  //         $message = $email." Email already exist!!";
+  //       }
+  //       else {
+  //         mysql_query("insert into users(name,email,password) values('".$name."','".$email."','".md5($password)."')");
+  //         $message = "Signup Sucessfully!!";
+  //     }
+  //   }
 
 ?>
-
+-->
 
 <!DOCTYPE html>
 <html lang="en">
