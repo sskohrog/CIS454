@@ -39,7 +39,7 @@ if( isset($_POST['action']=="signup") {
       $error = true;
       $emailError = "Provided Email is already in use.";
     }
-  } 
+  }
 
   $password = hash('sha256', $pass);
 
@@ -64,7 +64,7 @@ if( isset($_POST['action']=="signup") {
 
 //LOGIN PHP
 
-if( isset($_POST['action']=="login") { 
+if( isset($_POST['action']=="signup") { 
     $email = trim($_POST['email']);
     $email = strip_tags($email);
     $email = htmlspecialchars($email);
@@ -139,16 +139,6 @@ if( isset($_POST['action']=="login") {
           <h1>Sign Up for Free</h1>
 
           <form action="" method="POST">
-
-            <?php
-            if (isset($errMSG)) {
-            ?>
-            <div class="form-group">
-                     <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
-            <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-                        </div>
-                     </div>
-            <?php } ?>
 
             <div class="field-wrap">
               <label>
