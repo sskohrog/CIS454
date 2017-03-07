@@ -254,7 +254,7 @@ if( isset($_POST['login']) ) {
 
       <p class="forgot"><a href="#">Forgot Password?</a></p>
 
-      <input type="submit" value="Create Account" class="button button-block" name="login"/>Log In</input>
+      <input type="submit" value="Create Account" class="button button-block" name="login"/></input>
 
     </form>
 
