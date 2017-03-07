@@ -3,7 +3,7 @@ include_once "config-user.php";
 ob_start();
 session_start();
  
- if( !isset($_SESSION['user']) ) {
+ if( !isset($_SESSION['members']) ) {
   header("Location: Login-Signup/Login_Register.php");
   exit;
  }
