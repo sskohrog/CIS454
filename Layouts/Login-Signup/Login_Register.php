@@ -32,7 +32,7 @@ if( isset($_POST['signup']) ) {
     $emailError = "Please enter valid email address.";
   } else {
 // check email exist or not
-    $query = "SELECT userEmail FROM users WHERE userEmail='$email'";
+    $query = "SELECT email FROM members WHERE email='$email'";
     $result = mysql_query($query);
     $count = mysql_num_rows($result);
     if($count!=0){
@@ -46,7 +46,7 @@ if( isset($_POST['signup']) ) {
 // if there's no error, continue to signup
   if( !$error ) {
 
-    $query = "INSERT INTO users(userName,userEmail,userPass) VALUES('$name','$email','$password')";
+    $query = "INSERT INTO users(username,email,password) VALUES('$name','$email','$password')";
     $res = mysql_query($query);
 
     if ($res) {
@@ -91,12 +91,12 @@ if( isset($_POST['login']) ) {
 
       $password = hash('sha256', $pass); 
 
-      $res=mysql_query("SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+      $res=mysql_query("SELECT id, username, password FROM members WHERE email='$email'");
       $row=mysql_fetch_array($res);
       $count = mysql_num_rows($res); 
 
-      if( $count == 1 && $row['userPass']==$password ) {
-        $_SESSION['user'] = $row['userId'];
+      if( $count == 1 && $row['password']==$password ) {
+        $_SESSION['members'] = $row['id'];
         header("Location: home.php");
       } else {
         $errMSG = "Incorrect email & password combination, Try again...";
@@ -146,7 +146,7 @@ if( isset($_POST['login']) ) {
             <div class="form-group">
               <div class="alert">
                 <?php echo ($errTyp=="success") ? "success" : $errTyp; ?>
-                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                <?php echo $errMSG; ?>
               </div>
            </div>
           <?php } ?>
@@ -230,7 +230,7 @@ if( isset($_POST['login']) ) {
       ?>
         <div class="form-group">
           <div class="alert alert-danger">
-          <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+            <?php echo $errMSG; ?>
           </div>
        </div>
       <?php } ?>
