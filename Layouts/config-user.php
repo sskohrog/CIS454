@@ -9,7 +9,7 @@ Configures the database info
 	$DB_DATABASE = 'secure_login';
 	 
 	$conn = mysqli_connect($DB_SERVER,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
-	$dbcon = mysqli_select_db(DB_DATABASE);
+	$dbcon = mysqli_select_db($conn,$DB_DATABASE);
 	 
 	if ( !$conn ) {
 		die("Connection failed : " . mysqli_error());
