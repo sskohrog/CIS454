@@ -3,17 +3,6 @@
 Configures the database info
  -->
 
-<!--<?php
-	 // this will avoid mysql_connect() deprecation error.
- // 	error_reporting( ~E_DEPRECATED & ~E_NOTICE );
-
-	// define('DB_SERVER','localhost');
-	// define('DB_USERNAME','root');
-	// define('DB_PASSWORD','scheduler');
-	// define('DB_DATABASE','secure_login');
-	// $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE) or die(mysqli_error($db));
-?>-->
-
 <?php
 
 	// this will avoid mysql_connect() deprecation error.
@@ -22,11 +11,11 @@ Configures the database info
 	 
 	define('DB_SERVER','localhost');
 	define('DB_USERNAME','ec2-user');
-	define('DB_PASSWORD','scheduler');
+	define('DB_PASSWORD','password');
 	define('DB_DATABASE','secure_login');
 	 
-	$conn = mysql_connect(DBHOST,DBUSER,DBPASS);
-	$dbcon = mysql_select_db(DBNAME);
+	$conn = mysql_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD);
+	$dbcon = mysql_select_db(DB_DATABASE);
 	 
 	if ( !$conn ) {
 		die("Connection failed : " . mysql_error());
