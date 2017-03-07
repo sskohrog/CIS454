@@ -159,34 +159,25 @@ if( isset($_POST['login']) ) {
 
           <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 
-            <div class="top-row">
-              <div class="field-wrap">
-                <label>
-                  First Name<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-
-              <div class="field-wrap">
-                <label>
-                  Last Name<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-              </div>
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input name="name" type="text" required autocomplete="off" />
             </div>
 
             <div class="field-wrap">
               <label>
                 Email Address<span class="req">*</span>
               </label>
-              <input type="email"required autocomplete="off"/>
+              <input name="email" type="email"required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
               <label>
                 Set A Password<span class="req">*</span>
               </label>
-              <input type="password"required autocomplete="off"/>
+              <input name="pass" type="password"required autocomplete="off"/>
             </div>
 
             <div class="top-row">
@@ -245,14 +236,14 @@ if( isset($_POST['login']) ) {
         <label>
           Email Address<span class="req">*</span>
         </label>
-        <input type="email"required autocomplete="off"/>
+        <input name="email" type="email"required autocomplete="off"/>
       </div>
 
       <div class="field-wrap">
         <label>
           Password<span class="req">*</span>
         </label>
-        <input type="password"required autocomplete="off"/>
+        <input name="pass" type="password"required autocomplete="off"/>
       </div>
 
       <p class="forgot"><a href="#">Forgot Password?</a></p>
