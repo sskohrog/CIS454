@@ -51,7 +51,8 @@ if( isset($_POST['signup']) ) {
       unset($email);
       unset($pass);
 
-      $log=mysqli_query($conn,"SELECT id, username, password FROM members WHERE email='$email'");
+      $q = "SELECT id, username, password FROM members WHERE email='$email'";
+      $log=mysqli_query($conn,$q);
       $row2=mysqli_fetch_array($log);
 
       $_SESSION['members'] = $row2['id'];
