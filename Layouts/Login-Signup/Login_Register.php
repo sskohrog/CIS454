@@ -13,7 +13,7 @@ $error = false;
 
 
 //SIGN UP PHP
-if( isset($_POST['signup']) ) { 
+if( isset($_POST['action']=="signup") { 
   $name = trim($_POST['name']);
   $name = strip_tags($name);
   $name = htmlspecialchars($name);
@@ -84,7 +84,7 @@ if( isset($_POST['signup']) ) {
 
 //LOGIN PHP
 
-if( isset($_POST['login']) ) { 
+if( isset($_POST['action']=="login") { 
     $email = trim($_POST['email']);
     $email = strip_tags($email);
     $email = htmlspecialchars($email);
@@ -158,7 +158,7 @@ if( isset($_POST['login']) ) {
         <div id="signup">   
           <h1>Sign Up for Free</h1>
 
-          <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+          <form action="" method="POST">
 
             <div class="field-wrap">
               <label>
@@ -231,7 +231,7 @@ if( isset($_POST['login']) ) {
   <div id="login">   
     <h1>Welcome Back!</h1>
 
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+    <form action="" method="POST">
 
       <div class="field-wrap">
         <label>
