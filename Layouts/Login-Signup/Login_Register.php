@@ -3,11 +3,6 @@ include_once "../config-user.php";
 ob_start();
 session_start();
 
-// it will never let you open index(login) page if session is set
-if ( isset($_SESSION['user'])!="" ) {
-  header("Location: home.php");
-  exit;
-}
 
 $error = false;
 
