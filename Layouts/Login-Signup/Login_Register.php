@@ -144,10 +144,11 @@ if( isset($_POST['action']=="login") {
             if (isset($errMSG)) {
             ?>
             <div class="form-group">
-                     <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
-            <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-                        </div>
-                     </div>
+              <div class="alert alert-info">
+                <?php echo ($errTyp=="success") ? "success" : $errTyp; ?>
+                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+              </div>
+            </div>
             <?php } ?>
 
             <div class="field-wrap">
