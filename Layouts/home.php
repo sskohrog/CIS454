@@ -8,7 +8,7 @@ session_start();
   exit;
  }
 
- $res=mysql_query("SELECT * FROM members WHERE id=".$_SESSION['user']);
+ $res=mysqli_query($conn,"SELECT * FROM members WHERE id=".$_SESSION['members']);
  $userRow=mysqli_fetch_array($res);
 ?>
 
