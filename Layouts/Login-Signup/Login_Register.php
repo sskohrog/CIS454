@@ -50,18 +50,16 @@ if( isset($_POST['signup']) ) {
       unset($name);
       unset($email);
       unset($pass);
+
+      $log=mysqli_query($conn,"SELECT id, username, password FROM members WHERE email='$email'");
+      $row2=mysqli_fetch_array($log);
+
+      $_SESSION['members'] = $row2['id'];
+      header("Location: ../home.php");
     } else {
       $errTyp = "danger";
       $errMSG = "Account was not created, please try again later ..."; 
     } 
-    $log=mysqli_query($conn,"SELECT id, username, password FROM members WHERE email='$email'");
-    $row2 = mysqli_fetch_array($log);
-    $count2 = mysqli_num_rows($log); 
-
-    if( $count2 == 1 && $row2['password']==$password ) {
-      $_SESSION['members'] = $row2['id'];
-      header("Location: ../home.php");
-    }
   }
 }
 
