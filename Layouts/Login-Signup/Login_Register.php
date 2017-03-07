@@ -144,11 +144,10 @@ if( isset($_POST['action']=="login") {
             if (isset($errMSG)) {
             ?>
             <div class="form-group">
-              <div class="alert alert-info">
-                <?php echo ($errTyp=="success") ? "success" : $errTyp; ?>
-                <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-              </div>
-            </div>
+                     <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
+            <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+                        </div>
+                     </div>
             <?php } ?>
 
             <div class="field-wrap">
@@ -162,8 +161,7 @@ if( isset($_POST['action']=="login") {
               <label>
                 Email Address<span class="req">*</span>
               </label>
-              <input name="email" type="email" required autocomplete="off"/>
-              <span class="text-danger"><?php echo $emailError; ?></span>
+              <input name="email" type="email"required autocomplete="off"/>
             </div>
 
             <div class="field-wrap">
@@ -225,22 +223,11 @@ if( isset($_POST['action']=="login") {
 
     <form action="" method="POST">
 
-    <?php
-      if ( isset($errMSG) ) {
-    ?>
-      <div class="form-group">
-        <div class="alert alert-danger">
-          <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-        </div>
-      </div>
-      <?php } ?>
-
       <div class="field-wrap">
         <label>
           Email Address<span class="req">*</span>
         </label>
         <input name="email" type="email"required autocomplete="off"/>
-        <span class="text-danger"><?php echo $emailError; ?></span>
       </div>
 
       <div class="field-wrap">
@@ -248,7 +235,6 @@ if( isset($_POST['action']=="login") {
           Password<span class="req">*</span>
         </label>
         <input name="pass" type="password"required autocomplete="off"/>
-        <span class="text-danger"><?php echo $passError; ?></span>
       </div>
 
       <p class="forgot"><a href="#">Forgot Password?</a></p>
