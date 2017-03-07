@@ -1,5 +1,6 @@
 <?php 
-         
+    include "../config-user.php";
+    session_start();     
     // if($_POST['action']=="login") {
   if($_POST['login') {
         $email = mysqli_real_escape_string($db,$_POST['email']);
@@ -34,7 +35,6 @@
       }
     }
 
- 
 ?>
 
 
