@@ -81,7 +81,7 @@
             </select>
           </div>
 
-          <div class = "field-wrap">
+          <div class="field-wrap college">
             <label>
               College<span class="req">*</span>
             </label>

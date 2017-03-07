@@ -3,8 +3,10 @@
 /  stylesheet for Scheduler
 */
 
-/* signup.html CSS */
-
 .forgot > a {
     color: #333333;
+}
+
+.college {
+	left: -78px;
 }
