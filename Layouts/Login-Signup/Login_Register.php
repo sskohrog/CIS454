@@ -33,8 +33,8 @@ if( isset($_POST['signup']) ) {
   } else {
 // check email exist or not
     $query = "SELECT email FROM members WHERE email='$email'";
-    $result = mysql_query($query);
-    $count = mysql_num_rows($result);
+    $result = mysqli_query($conn,$query);
+    $count = mysqli_num_rows($result);
     if($count!=0){
       $error = true;
       $emailError = "Provided Email is already in use.";
@@ -47,7 +47,7 @@ if( isset($_POST['signup']) ) {
   if( !$error ) {
 
     $query = "INSERT INTO members(username,email,password) VALUES('$name','$email','$password')";
-    $res = mysql_query($query);
+    $res = mysqli_query($conn,$query);
 
     if ($res) {
       $errTyp = "success";
@@ -91,9 +91,9 @@ if( isset($_POST['login']) ) {
 
       $password = hash('sha256', $pass); 
 
-      $res=mysql_query("SELECT id, username, password FROM members WHERE email='$email'");
-      $row=mysql_fetch_array($res);
-      $count = mysql_num_rows($res); 
+      $res=mysqli_query($conn,"SELECT id, username, password FROM members WHERE email='$email'");
+      $row=mysqli_fetch_array($res);
+      $count = mysqli_num_rows($res); 
 
       if( $count == 1 && $row['password']==$password ) {
         $_SESSION['members'] = $row['id'];
