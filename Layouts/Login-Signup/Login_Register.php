@@ -50,13 +50,6 @@ if( isset($_POST['signup']) ) {
       unset($name);
       unset($email);
       unset($pass);
-
-      $q = "SELECT id, username, password FROM members WHERE email='$email'";
-      $log=mysqli_query($conn,$q);
-      $row2=mysqli_fetch_array($log);
-
-      $_SESSION['members'] = $row2['id'];
-      header("Location: ../home.php");
     } else {
       $errTyp = "danger";
       $errMSG = "Account was not created, please try again later ..."; 
