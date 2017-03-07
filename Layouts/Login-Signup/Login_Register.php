@@ -1,5 +1,5 @@
 <?php 
-if(isset($_POST['submit'])) {          
+         
     // if($_POST['action']=="login") {
   if($_POST['login') {
         $email = mysqli_real_escape_string($db,$_POST['email']);
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
           $message = "Signup Sucessfully!!";
       }
     }
-}
+
  
 ?>
 
