@@ -10,3 +10,7 @@
 .college {
 	left: -78px;
 }
+
+.field-wrap > label {
+    top: -6px;
+}
