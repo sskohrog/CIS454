@@ -222,7 +222,7 @@ if( isset($_POST['login']) ) {
         </div>
       </div>
 
-      <button type="submit" value="Signup" class="button button-block" name="signup"/>Get Started</button>
+      <input type="submit" value="Signup" class="button button-block" name="signup"/>Get Started</input>
 
     </form>
 
@@ -249,7 +249,7 @@ if( isset($_POST['login']) ) {
 
       <p class="forgot"><a href="#">Forgot Password?</a></p>
 
-      <button type="submit" value="Create Account" class="button button-block" name="login"/>Log In</button>
+      <input type="submit" value="Create Account" class="button button-block" name="login"/>Log In</input>
 
     </form>
 
