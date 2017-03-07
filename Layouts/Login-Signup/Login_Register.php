@@ -1,5 +1,6 @@
 <?php
-require_once "../config-user.php";
+include_once "../config-user.php";
+ob_start();
 session_start();
 
 // it will never let you open index(login) page if session is set
@@ -274,3 +275,5 @@ if( isset($_POST['login']) ) {
 
 </body>
 </html>
+
+<?php ob_end_flush(); ?>
